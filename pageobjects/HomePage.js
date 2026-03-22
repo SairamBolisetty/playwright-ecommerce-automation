@@ -1,4 +1,5 @@
 const {test,expect} = require('@playwright/test');
+//const dataset = JSON.parse(JSON.stringify(require('../testData/LetsShopTestData.json')));
 class HomePage{
 
     constructor(page){
@@ -10,13 +11,13 @@ class HomePage{
         this.logoElement = page.locator('.heading h1');
 
     }
-    async getProductsName(){
+    async getProductsName(productName){
         const firstProduct = await this.productsName.first().textContent();
         console.log(firstProduct);
        const allProducts= await this.productsName.allTextContents();
        console.log(allProducts);
        const count = await this.productsName.count();
-       const productName = 'iphone 13 pro';
+       //const productName = 'iphone 13 pro';
        
 
        for(let i=0; i< count; i++){

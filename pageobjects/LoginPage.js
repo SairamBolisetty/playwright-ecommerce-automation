@@ -16,9 +16,6 @@ class LoginPage{
         await this.password.fill(password);
         await this.loginBtn.click();
     }
-    async test1(){
-        await this.username.fill('122');
-
-    }
+    
 }
 module.exports={LoginPage};
