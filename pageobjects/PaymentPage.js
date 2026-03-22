@@ -28,7 +28,8 @@ class PaymentPage{
         await this.cvv.fill('123');
         await this.nameOnCard.fill('Sai');
         await this.country.pressSequentially('India');
-        await this.page.waitForTimeout(2000);
+        //await this.page.waitForTimeout(2000);
+        await this.countryOption.waitFor({ state: 'visible', timeout: 5000 });
         await this.countryOption.click();
         
         await this.placeOrderBtn.click();

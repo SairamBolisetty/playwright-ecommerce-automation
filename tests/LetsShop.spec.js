@@ -1,5 +1,5 @@
 const {test,expect} = require('@playwright/test');
-const {POManager}= require('../pageobjects/PoManager');
+const {POManager}= require('../pageobjects/POManager.js');
 
 
 
